@@ -1,18 +1,17 @@
 import "./styles.css";
-import React from "react";
+import React, { useState } from "react";
 
 export const App = () => {
+  const [display, setDisplay] = useState("Hellow World.");
+
   const onClick = () => {
-    const box = [1, 10, 100, 1000];
-    const result = box.map((value) => {
-      return value * 2;
-    });
-    console.log(result);
+    if (display === "Hellow World.") setDisplay("Hoge Hoge.");
+    else setDisplay("Hellow World.");
   };
 
   return (
     <div>
-      <h1>Hellow World.</h1>
+      <h1>{display}</h1>
       <button onClick={onClick}>OK</button>
     </div>
   );
