@@ -5,8 +5,9 @@ export const App = () => {
   const [display, setDisplay] = useState("Hellow World.");
 
   const onClick = () => {
-    if (display === "Hellow World.") setDisplay("Hoge Hoge.");
-    else setDisplay("Hellow World.");
+    display === "Hellow World."
+      ? setDisplay("Hoge Hoge.")
+      : setDisplay("Hellow World.");
   };
 
   return (
